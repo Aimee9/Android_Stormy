@@ -12,7 +12,7 @@ public class CurrentWeather {
     private long mTime;
     private double mTemperature;
     private double mHumidity;
-    private double MPrecipChance;
+    private double mPrecipChance;
     private String mSummary;
     private String mTimeZone;
 
@@ -78,8 +78,8 @@ public class CurrentWeather {
         mTime = time;
     }
 
-    public double getTemperature() {
-        return mTemperature;
+    public int getTemperature() {
+        return (int)Math.round(mTemperature);
     }
 
     public void setTemperature(double temperature) {
@@ -94,12 +94,13 @@ public class CurrentWeather {
         mHumidity = humidity;
     }
 
-    public double getMPrecipChance() {
-        return MPrecipChance;
+    public int getPrecipChance() {
+        double precipChance = mPrecipChance * 100;
+        return (int)Math.round(precipChance);
     }
 
-    public void setMPrecipChance(double MPrecipChance) {
-        this.MPrecipChance = MPrecipChance;
+    public void setPrecipChance(double MPrecipChance) {
+        this.mPrecipChance = MPrecipChance;
     }
 
     public String getSummary() {

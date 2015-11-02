@@ -13,8 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Location"
-        android:id="@+id/locationText"
+        android:text="Alcatraz, CA"
+        android:id="@+id/locationLabel"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="68dp"
@@ -24,53 +24,126 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/weatherIconImage"
-        android:layout_alignTop="@+id/locationText"
-        android:layout_toStartOf="@+id/locationText"
+        android:id="@+id/iconImageView"
+        android:layout_alignTop="@+id/locationLabel"
+        android:layout_toStartOf="@+id/locationLabel"
         android:src="@drawable/clear_day"
-        android:layout_alignBottom="@+id/locationText"
-        android:layout_toLeftOf="@+id/locationText"/>
+        android:layout_alignBottom="@+id/locationLabel"
+        android:layout_toLeftOf="@+id/locationLabel"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="The temperature at"
-        android:id="@+id/tempText"
-        android:layout_below="@+id/locationText"
-        android:layout_alignLeft="@+id/weatherIconImage"
-        android:layout_alignStart="@+id/weatherIconImage"
-        android:layout_marginTop="39dp"
+        android:id="@+id/timeLabel"
         android:textSize="15sp"
-        android:textColor="@android:color/white"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TimeText"
-        android:layout_alignTop="@+id/tempText"
-        android:layout_toRightOf="@+id/tempText"
-        android:layout_toEndOf="@+id/tempText"
-        android:textColor="@android:color/white"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="is"
-        android:id="@+id/isText"
-        android:layout_alignBottom="@+id/tempText"
-        android:layout_toRightOf="@+id/TimeText"
-        android:layout_toEndOf="@+id/TimeText"
-        android:textColor="@android:color/white"/>
+        android:textColor="#80ffffff"
+        android:layout_above="@+id/temperatureLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="59 degrees"
-        android:id="@+id/temperatureText"
+        android:text="101"
+        android:id="@+id/temperatureLabel"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="40sp"
+        android:textSize="150sp"
         android:textColor="@android:color/white"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/degreeImageView"
+        android:src="@drawable/degree"
+        android:layout_alignTop="@+id/temperatureLabel"
+        android:layout_toRightOf="@+id/temperatureLabel"
+        android:layout_toEndOf="@+id/temperatureLabel"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HUMIDITY"
+                android:id="@+id/humidityText"
+                android:textColor="@android:color/white"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0.88"
+                android:id="@+id/humidityValue"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RAIN/SNOW"
+                android:id="@+id/precipText"
+                android:textColor="@android:color/white"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="100%"
+                android:id="@+id/precipValue"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stormy with a chance of meatballs"
+        android:id="@+id/summaryText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/refreshImageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/refresh"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_alignBottom="@+id/refreshImageView"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
