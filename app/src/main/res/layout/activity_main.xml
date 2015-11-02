@@ -6,14 +6,71 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity">
+                tools:context=".MainActivity"
+                android:background="#ff8a31">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Weather App"
-        android:id="@+id/textView"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Location"
+        android:id="@+id/locationText"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"/>
+        android:layout_marginTop="68dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherIconImage"
+        android:layout_alignTop="@+id/locationText"
+        android:layout_toStartOf="@+id/locationText"
+        android:src="@drawable/clear_day"
+        android:layout_alignBottom="@+id/locationText"
+        android:layout_toLeftOf="@+id/locationText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The temperature at"
+        android:id="@+id/tempText"
+        android:layout_below="@+id/locationText"
+        android:layout_alignLeft="@+id/weatherIconImage"
+        android:layout_alignStart="@+id/weatherIconImage"
+        android:layout_marginTop="39dp"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TimeText"
+        android:layout_alignTop="@+id/tempText"
+        android:layout_toRightOf="@+id/tempText"
+        android:layout_toEndOf="@+id/tempText"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="is"
+        android:id="@+id/isText"
+        android:layout_alignBottom="@+id/tempText"
+        android:layout_toRightOf="@+id/TimeText"
+        android:layout_toEndOf="@+id/TimeText"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="59 degrees"
+        android:id="@+id/temperatureText"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:textColor="@android:color/white"/>
+
 </RelativeLayout>
